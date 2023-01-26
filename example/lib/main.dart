@@ -69,8 +69,8 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         body: Column(children: [
           Padding(
-              padding: EdgeInsets.all(10),
-              child: Row(children: [
+              padding: EdgeInsets.only(top: 16),
+              child: Wrap(runSpacing: 12, children: [
                 _doubleTextField(_scale, 'Scale',
                     (value) => options.withValues(scale: value)),
                 _doubleTextField(_size, 'Size',
@@ -114,7 +114,7 @@ class _MyHomePageState extends State<MyHomePage> {
       Padding(
           padding: EdgeInsets.only(right: 5.0),
           child: Container(
-              width: 100,
+              width: 64,
               child: TextField(
                   controller: controller,
                   onChanged: (value) {
